@@ -8,7 +8,7 @@ import sys
 {%- if cookiecutter.command_line_interface|lower == 'argparse' %}
 def main():
     """Console script for {{cookiecutter.project_slug}}."""
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='{{cookiecutter.project_short_description}}')
     parser.add_argument('_', nargs='*')
     args = parser.parse_args()
 
